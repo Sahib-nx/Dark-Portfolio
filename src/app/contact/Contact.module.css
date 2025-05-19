@@ -1,0 +1,65 @@
+.contactContainer {
+  padding: 4rem 1rem;
+  background: var(--background-gradient);
+  min-height: calc(100vh - 6rem);
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contactHeader p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.infoContainer {
+  flex: 1;
+  padding: 2rem;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .contactContent {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .contactContainer {
+    padding: 6rem 2rem;
+  }
+}

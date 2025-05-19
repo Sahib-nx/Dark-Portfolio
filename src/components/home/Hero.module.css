@@ -1,4 +1,3 @@
-
 .hero {
   min-height: calc(100vh - var(--nav-height));
   display: flex;
@@ -115,7 +114,7 @@
 
 @media (max-width: 768px) {
   .heroContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: 1rem;
   }
@@ -130,7 +129,6 @@
   
   .animationContainer {
     height: 350px;
-    order: -1; /* Move animation above text on mobile */
   }
   
   .ctaContainer {

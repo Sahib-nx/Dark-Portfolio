@@ -1,0 +1,76 @@
+.footer {
+  background: rgba(10, 10, 30, 0.9);
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.socialIcon:hover {
+  color: var(--accent-primary);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.scrollToTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-speed), transform var(--transition-speed);
+  z-index: 10;
+}
+
+.scrollToTopVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scrollToTop:hover {
+  background-color: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
