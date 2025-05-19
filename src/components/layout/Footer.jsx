@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className={styles.socialIcons}>
           <motion.a
-            href="#"
+            href="https://github.com/Sahib-nx"
             className={styles.socialIcon}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -52,7 +52,7 @@ const Footer = () => {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/sahib-khan-056724345/"
             className={styles.socialIcon}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -61,7 +61,7 @@ const Footer = () => {
             <FaLinkedin />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://x.com/Sahib18186698"
             className={styles.socialIcon}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -69,15 +69,7 @@ const Footer = () => {
           >
             <FaTwitter />
           </motion.a>
-          <motion.a
-            href="#"
-            className={styles.socialIcon}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Dribbble"
-          >
-            <FaDribbble />
-          </motion.a>
+     
         </div>
         
         {/* Copyright Text */}

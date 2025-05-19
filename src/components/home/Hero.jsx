@@ -79,7 +79,7 @@ const Hero = () => {
             variants={textVariants}
           >
             <motion.a 
-              href="#" 
+              href="https://github.com/Sahib-nx" 
               className={styles.socialLink}
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -89,7 +89,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a 
-              href="#" 
+              href="https://www.linkedin.com/in/sahib-khan-056724345/" 
               className={styles.socialLink}
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -99,7 +99,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a 
-              href="#" 
+              href="https://x.com/Sahib18186698" 
               className={styles.socialLink}
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
