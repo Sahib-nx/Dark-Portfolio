@@ -28,10 +28,16 @@ const AnimatedSection = () => {
     // Initial update
     updateDimensions();
 
+    // Force a resize event after a short delay to ensure Three.js renderer updates on mount
+    const resizeTimeout = setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
+
     // Add resize listener
     window.addEventListener('resize', updateDimensions);
     
     return () => {
+      clearTimeout(resizeTimeout);
       window.removeEventListener('resize', updateDimensions);
     };
   }, []);

@@ -83,6 +83,18 @@
   align-items: center;
   position: relative;
   height: 500px;
+  min-width: 300px; /* added min-width for mobile */
+
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .animationContainer {
+    height: 350px;
+    min-width: 300px; /* added min-width for mobile */
+   
+    z-index: 10; /* higher z-index on mobile */
+  }
 }
 
 .socialLinks {

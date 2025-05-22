@@ -7,7 +7,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  
+  background-color: transparent; /* default no bg */
+  z-index: 0;
 }
 
 /* Better responsive handling for different screen sizes */
@@ -15,6 +16,9 @@
   .animationContainer {
     height: 250px;
     min-height: 250px;
+    min-width: 300px; /* added min-width for mobile */
+    
+    z-index: 10; /* higher z-index on mobile */
   }
 }
 
@@ -22,6 +26,8 @@
   .animationContainer {
     height: 200px;
     min-height: 200px;
+    min-width: 250px; /* added min-width for smaller phone
+    z-index: 10; /* higher z-index on smaller phones */
   }
 }
 
@@ -42,7 +48,7 @@
   transform: translate(-50%, -50%);
   width: 60%;
   height: 60%;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(79, 70, 229, 0) 70%);
+
   pointer-events: none;
   z-index: 1;
 }

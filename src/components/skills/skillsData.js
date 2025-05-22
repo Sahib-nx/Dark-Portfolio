@@ -140,14 +140,14 @@ export const skills = [
     name: 'MongoDB', 
     icon: DiMongodb, 
     category: 'database', 
-    level: 3, 
+    level: 5, 
     color: '#47A248' 
   },
   { 
     name: 'SQL Server', 
     icon: DiMsqlServer, 
     category: 'database', 
-    level: 4, 
+    level: 5, 
     color: '#CC2927' 
   },
   { 
