@@ -55,13 +55,13 @@ export const skills = [
     level: 5, 
     color: '#F7DF1E' 
   },
-  { 
-    name: 'TypeScript', 
-    icon: BiLogoTypescript, 
-    category: 'frontend', 
-    level: 4, 
-    color: '#3178C6' 
-  },
+  // { 
+  //   name: 'TypeScript', 
+  //   icon: BiLogoTypescript, 
+  //   category: 'frontend', 
+  //   level: 4, 
+  //   color: '#3178C6' 
+  // },
   { 
     name: 'React', 
     icon: FaReact, 
@@ -101,7 +101,7 @@ export const skills = [
     name: 'Bootstrap', 
     icon: BiLogoBootstrap, 
     category: 'frontend', 
-    level: 4, 
+    level: 5, 
     color: '#7952B3' 
   },
   
@@ -150,13 +150,13 @@ export const skills = [
     level: 5, 
     color: '#CC2927' 
   },
-  { 
-    name: 'Firebase', 
-    icon: BiLogoFirebase, 
-    category: 'database', 
-    level: 3, 
-    color: '#FFCA28' 
-  },
+  // { 
+  //   name: 'Firebase', 
+  //   icon: BiLogoFirebase, 
+  //   category: 'database', 
+  //   level: 3, 
+  //   color: '#FFCA28' 
+  // },
   { 
     name: 'Git', 
     icon: FaGitAlt, 
@@ -168,7 +168,7 @@ export const skills = [
     name: 'npm', 
     icon: FaNpm, 
     category: 'database', 
-    level: 4, 
+    level: 5, 
     color: '#CB3837' 
   },
   { 
@@ -178,13 +178,13 @@ export const skills = [
     level: 5, 
     color: '#007ACC' 
   },
-  { 
-    name: 'Docker', 
-    icon: FaDocker, 
-    category: 'database', 
-    level: 3, 
-    color: '#2496ED' 
-  },
+  // { 
+  //   name: 'Docker', 
+  //   icon: FaDocker, 
+  //   category: 'database', 
+  //   level: 3, 
+  //   color: '#2496ED' 
+  // },
 ];
 
 // Example of how to add new skills:
