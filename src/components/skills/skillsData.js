@@ -5,22 +5,20 @@ import {
   FaJs, 
   FaReact, 
   FaNodeJs, 
-  FaDatabase, 
   FaGitAlt, 
   FaNpm, 
   FaDocker,
   FaServer,
-  FaMicrosoft,
   FaCode,
-  FaWindows,
-  FaFileCode
+  FaCog,
+  FaStream
 } from 'react-icons/fa';
 
-import { DiMongodb, DiDotnet, DiMsqlServer } from 'react-icons/di';
-import { BiLogoTypescript, BiLogoTailwindCss, BiLogoFirebase, BiLogoBootstrap } from 'react-icons/bi';
-import { TbBrandReactNative, TbBrandNextjs, TbBrandCSharp, TbBrandRedux, TbBrandVscode } from 'react-icons/tb';
-import { AiOutlineConsoleSql } from 'react-icons/ai';
-import { BsFiletypeJson } from 'react-icons/bs';
+import { DiMongodb, DiDotnet, DiMsqlServer, } from 'react-icons/di';
+import { BiLogoTypescript, BiLogoTailwindCss, BiLogoBootstrap } from 'react-icons/bi';
+import { TbBrandReactNative, TbBrandNextjs, TbBrandCSharp, TbBrandRedux, TbBrandVscode, TbDatabase, TbBrandPrisma } from 'react-icons/tb';
+import {  BsShieldCheck } from 'react-icons/bs';
+import { SiDrizzle, SiVercel, SiNetlify, SiRender, SiTrpc, SiClerk, SiPostgresql, SiShadcnui } from 'react-icons/si';
 
 /**
  * Skills data array
@@ -28,7 +26,7 @@ import { BsFiletypeJson } from 'react-icons/bs';
  * @typedef {Object} Skill
  * @property {string} name - The name of the skill
  * @property {React.ComponentType} icon - The React Icon component
- * @property {string} category - Category (frontend, backend, database)
+ * @property {string} category - Category (frontend, backend, database, tools, cloud, auth)
  * @property {number} level - Proficiency level from 1-5
  * @property {string} color - Brand color for the icon
  */
@@ -55,13 +53,13 @@ export const skills = [
     level: 5, 
     color: '#F7DF1E' 
   },
-  // { 
-  //   name: 'TypeScript', 
-  //   icon: BiLogoTypescript, 
-  //   category: 'frontend', 
-  //   level: 4, 
-  //   color: '#3178C6' 
-  // },
+  { 
+    name: 'TypeScript', 
+    icon: BiLogoTypescript, 
+    category: 'frontend', 
+    level: 4, 
+    color: '#3178C6' 
+  },
   { 
     name: 'React', 
     icon: FaReact, 
@@ -104,6 +102,13 @@ export const skills = [
     level: 5, 
     color: '#7952B3' 
   },
+  { 
+    name: 'Shadcn UI', 
+    icon: SiShadcnui, 
+    category: 'frontend', 
+    level: 4, 
+    color: '#ffffff' 
+  },
   
   // Backend Skills
   { 
@@ -134,8 +139,22 @@ export const skills = [
     level: 3, 
     color: '#ffffff' 
   },
+  { 
+    name: 'tRPC', 
+    icon: SiTrpc, 
+    category: 'backend', 
+    level: 4, 
+    color: '#2596BE' 
+  },
+  { 
+    name: 'Inngest', 
+    icon: FaCog, 
+    category: 'backend', 
+    level: 3, 
+    color: '#6366F1' 
+  },
   
-  // Database & Tools
+  // Database & ORM
   { 
     name: 'MongoDB', 
     icon: DiMongodb, 
@@ -150,49 +169,146 @@ export const skills = [
     level: 5, 
     color: '#CC2927' 
   },
-  // { 
-  //   name: 'Firebase', 
-  //   icon: BiLogoFirebase, 
-  //   category: 'database', 
-  //   level: 3, 
-  //   color: '#FFCA28' 
-  // },
+  { 
+    name: 'PostgreSQL', 
+    icon: SiPostgresql, 
+    category: 'database', 
+    level: 4, 
+    color: '#336791' 
+  },
+  { 
+    name: 'Prisma', 
+    icon: TbBrandPrisma, 
+    category: 'database', 
+    level: 4, 
+    color: '#2D3748' 
+  },
+  { 
+    name: 'Drizzle ORM', 
+    icon: SiDrizzle, 
+    category: 'database', 
+    level: 3, 
+    color: '#C5F74F' 
+  },
+  { 
+    name: 'Neon', 
+    icon: TbDatabase, 
+    category: 'database', 
+    level: 3, 
+    color: '#00E5FF' 
+  },
+  
+  // Cloud & Deployment
+  { 
+    name: 'Vercel', 
+    icon: SiVercel, 
+    category: 'cloud', 
+    level: 4, 
+    color: '#ffffff' 
+  },
+  { 
+    name: 'Netlify', 
+    icon: SiNetlify, 
+    category: 'cloud', 
+    level: 4, 
+    color: '#00C7B7' 
+  },
+  { 
+    name: 'Render', 
+    icon: SiRender, 
+    category: 'cloud', 
+    level: 3, 
+    color: '#46E3B7' 
+  },
+  { 
+    name: 'Docker', 
+    icon: FaDocker, 
+    category: 'cloud', 
+    level: 3, 
+    color: '#2496ED' 
+  },
+  
+  // Authentication & Security
+  { 
+    name: 'Clerk', 
+    icon: SiClerk, 
+    category: 'auth', 
+    level: 4, 
+    color: '#6C47FF' 
+  },
+  { 
+    name: 'Better Auth', 
+    icon: BsShieldCheck, 
+    category: 'auth', 
+    level: 3, 
+    color: '#10B981' 
+  },
+  
+  // Developer Tools & Services
   { 
     name: 'Git', 
     icon: FaGitAlt, 
-    category: 'database', 
+    category: 'tools', 
     level: 4, 
     color: '#F05032' 
   },
   { 
     name: 'npm', 
     icon: FaNpm, 
-    category: 'database', 
+    category: 'tools', 
     level: 5, 
     color: '#CB3837' 
   },
   { 
     name: 'VS Code', 
     icon: TbBrandVscode, 
-    category: 'database', 
+    category: 'tools', 
     level: 5, 
     color: '#007ACC' 
   },
-  // { 
-  //   name: 'Docker', 
-  //   icon: FaDocker, 
-  //   category: 'database', 
-  //   level: 3, 
-  //   color: '#2496ED' 
-  // },
+  { 
+    name: 'E2B Sandboxes', 
+    icon: FaCode, 
+    category: 'tools', 
+    level: 3, 
+    color: '#FF6B35' 
+  },
+  { 
+    name: 'Stream', 
+    icon: FaStream, 
+    category: 'tools', 
+    level: 3, 
+    color: '#005FFF' 
+  },
 ];
+
+// Category definitions for better organization
+export const categories = {
+  frontend: 'Frontend',
+  backend: 'Backend',
+  database: 'Database & ORM',
+  cloud: 'Cloud & Deployment',
+  auth: 'Authentication',
+  tools: 'Tools & Services'
+};
+
+// Helper function to get skills by category
+export const getSkillsByCategory = (category) => {
+  return skills.filter(skill => skill.category === category);
+};
+
+// Helper function to get all categories
+export const getAllCategories = () => {
+  return [...new Set(skills.map(skill => skill.category))];
+};
 
 // Example of how to add new skills:
 /* 
 To add a new skill:
-1. Import the appropriate icon from react-icons
+1. Import the appropriate icon from react-icons (si for Simple Icons, fa for Font Awesome, etc.)
 2. Add a new object to the skills array following the structure above
-3. Make sure to set the proper 'category' so it appears in the right section
+3. Choose the proper 'category': frontend, backend, database, cloud, auth, tools
 4. Set the proficiency 'level' from 1-5
-5. Add the brand 'color' for the icon
+5. Add the brand 'color' for the icon (check brand guidelines or use common brand colors)
+6. If adding a new category, update the categories object and consider updating any UI that displays categories
 */

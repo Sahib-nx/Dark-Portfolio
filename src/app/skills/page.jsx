@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import SkillGrid from '@/components/skills/SkillGrid';
+import SkillGrid from "../../components/skills/SkillGrid"
 import styles from './Skills.module.css';
 
 export default function Skills() {
