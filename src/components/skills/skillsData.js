@@ -1,4 +1,3 @@
-// Import React Icons with verified available icons
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -11,14 +10,45 @@ import {
   FaServer,
   FaCode,
   FaCog,
-  FaStream
+  FaStream,
+  FaShieldAlt,
+  FaCloud, // Fallback for Vercel/Netlify
+  FaDatabase, // Fallback for Prisma
+  FaCubes, // Fallback for Shadcn
+  FaArrowRight // Fallback for Next.js
 } from 'react-icons/fa';
 
-import { DiMongodb, DiDotnet, DiMsqlServer, } from 'react-icons/di';
-import { BiLogoTypescript, BiLogoTailwindCss, BiLogoBootstrap } from 'react-icons/bi';
-import { TbBrandReactNative, TbBrandNextjs, TbBrandCSharp, TbBrandRedux, TbBrandVscode, TbDatabase, TbBrandPrisma } from 'react-icons/tb';
-import {  BsShieldCheck } from 'react-icons/bs';
-import { SiDrizzle, SiVercel, SiNetlify, SiRender, SiTrpc, SiClerk, SiPostgresql, SiShadcnui } from 'react-icons/si';
+import { 
+  DiMongodb, 
+  DiDotnet, 
+  DiMsqlServer,
+  DiPostgresql // Alternative PostgreSQL icon
+} from 'react-icons/di';
+
+import { 
+  BiLogoTypescript, 
+  BiLogoTailwindCss, 
+  BiLogoBootstrap
+} from 'react-icons/bi';
+
+import { 
+  TbBrandReactNative, 
+  TbBrandCSharp, 
+  TbBrandRedux, 
+  TbBrandVscode, 
+  TbDatabase
+} from 'react-icons/tb';
+
+import { 
+  SiDrizzle, 
+  SiRender, 
+  SiTrpc, 
+  SiClerk,
+  SiNextdotjs, // Alternative Next.js icon
+  SiVercel, // Try this Vercel icon
+  SiNetlify, // Try this Netlify icon
+  SiPrisma // Alternative Prisma icon
+} from 'react-icons/si';
 
 /**
  * Skills data array
@@ -69,10 +99,10 @@ export const skills = [
   },
   { 
     name: 'Next.js', 
-    icon: TbBrandNextjs, 
+    icon: SiNextdotjs, // Changed to Simple Icons version
     category: 'frontend', 
     level: 4, 
-    color: '#ffffff' 
+    color: '#ffffff' // Keeping white for visibility
   },
   { 
     name: 'React Native', 
@@ -104,10 +134,10 @@ export const skills = [
   },
   { 
     name: 'Shadcn UI', 
-    icon: SiShadcnui, 
+    icon: FaCubes, // Changed to a reliable fallback icon
     category: 'frontend', 
     level: 4, 
-    color: '#ffffff' 
+    color: '#6366f1' // Changed to a visible purple color
   },
   
   // Backend Skills
@@ -137,7 +167,7 @@ export const skills = [
     icon: FaServer, 
     category: 'backend', 
     level: 3, 
-    color: '#ffffff' 
+    color: '#68cc00' // Changed to a visible green color
   },
   { 
     name: 'tRPC', 
@@ -171,14 +201,14 @@ export const skills = [
   },
   { 
     name: 'PostgreSQL', 
-    icon: SiPostgresql, 
+    icon: DiPostgresql, // Using DiIcons version which is more reliable
     category: 'database', 
     level: 4, 
     color: '#336791' 
   },
   { 
     name: 'Prisma', 
-    icon: TbBrandPrisma, 
+    icon: SiPrisma, // Using Simple Icons version
     category: 'database', 
     level: 4, 
     color: '#2D3748' 
@@ -201,14 +231,14 @@ export const skills = [
   // Cloud & Deployment
   { 
     name: 'Vercel', 
-    icon: SiVercel, 
+    icon: FaCloud, // Using reliable fallback icon
     category: 'cloud', 
     level: 4, 
-    color: '#ffffff' 
+    color: '#ffffff' // Keeping white for visibility
   },
   { 
     name: 'Netlify', 
-    icon: SiNetlify, 
+    icon: FaCloud, // Using reliable fallback icon
     category: 'cloud', 
     level: 4, 
     color: '#00C7B7' 
@@ -238,7 +268,7 @@ export const skills = [
   },
   { 
     name: 'Better Auth', 
-    icon: BsShieldCheck, 
+    icon: FaShieldAlt, 
     category: 'auth', 
     level: 3, 
     color: '#10B981' 
@@ -302,13 +332,16 @@ export const getAllCategories = () => {
   return [...new Set(skills.map(skill => skill.category))];
 };
 
-// Example of how to add new skills:
-/* 
-To add a new skill:
-1. Import the appropriate icon from react-icons (si for Simple Icons, fa for Font Awesome, etc.)
-2. Add a new object to the skills array following the structure above
-3. Choose the proper 'category': frontend, backend, database, cloud, auth, tools
-4. Set the proficiency 'level' from 1-5
-5. Add the brand 'color' for the icon (check brand guidelines or use common brand colors)
-6. If adding a new category, update the categories object and consider updating any UI that displays categories
-*/
+// Helper function to get skills by level
+export const getSkillsByLevel = (level) => {
+  return skills.filter(skill => skill.level === level);
+};
+
+// Helper function to get skill count by category
+export const getSkillCountByCategory = () => {
+  const counts = {};
+  skills.forEach(skill => {
+    counts[skill.category] = (counts[skill.category] || 0) + 1;
+  });
+  return counts;
+};

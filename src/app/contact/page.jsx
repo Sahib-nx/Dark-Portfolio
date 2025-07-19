@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
-import ContactForm from '@/components/contact/ContactForm';
-import ContactInfo from '@/components/contact/ContactInfo';
+import ContactForm from '../../components/contact/ContactForm';
+import ContactInfo from '../../components/contact/ContactInfo';
 import styles from './Contact.module.css';
 
 export default function Contact() {
