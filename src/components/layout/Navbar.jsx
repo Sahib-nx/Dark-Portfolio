@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,14 +45,14 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        {/* Logo */}
+        <Image src="./logo.svg" width={200} height={200} alt="Sahib"/>
         <Link href="/" className={styles.logo}>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Dev<span className={styles.logoHighlight}>Portfolio</span>
+            {/* Dev<span className={styles.logoHighlight}>Portfolio</span> */}
           </motion.span>
         </Link>
         
