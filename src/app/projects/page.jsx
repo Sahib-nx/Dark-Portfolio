@@ -75,7 +75,7 @@ const projectsData = [
     image: "./weather-app-logo.svg",
     technologies: ["React", "Weather API", "CSS3", "JavaScript", "Responsive Design"],
     githubUrl: "https://github.com/Sahib-nx/Weather_App",
-    liveUrl: "https://weather-app-demo.com",
+    liveUrl: "https://weathora-2025.netlify.app/",
     featured: false
   }
 ];
